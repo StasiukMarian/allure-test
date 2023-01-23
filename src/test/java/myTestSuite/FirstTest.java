@@ -15,11 +15,11 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 
-public class FirstTest  {
+public class FirstTest extends BaseTest {
 
     @Test
     public void test(){
-        Selenide.open("https://www.saucedemo.com/");
+
         $(By.xpath("//input[@placeholder='Username']")).append("standard_user");
         $(By.xpath("//input[@placeholder='Password']")).append("secret_sauce");
         Assert.assertTrue($(By.xpath("//input[@value='Login']")).is(Condition.visible));
