@@ -6,6 +6,7 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
 import core.config.Pages;
 import core.config.base.BaseTest;
+import core.config.pages.loginpage.LoginPage;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -17,9 +18,15 @@ import static com.codeborne.selenide.Selenide.$$;
 
 
 public class FirstTest extends BaseTest {
+    LoginPage loginPage = new LoginPage();
+
+    @BeforeMethod
+    public void prepareVariables() {
+        loginPage = new LoginPage();
+    }
 
     @Test
-    public void test(){
+    public void test() {
 
         $(By.xpath("//input[@placeholder='Username']")).append("standard_user");
         $(By.xpath("//input[@placeholder='Password']")).append("secret_sauce");
@@ -28,6 +35,7 @@ public class FirstTest extends BaseTest {
         Selenide.sleep(1000);
         List<String> texts = $$(By.xpath("//div[@class='inventory_item_label']//div[@class='inventory_item_name']")).texts();
         Selenide.sleep(1000);
+
         System.out.println("FIRST TEST COMPLETE");
     }
 

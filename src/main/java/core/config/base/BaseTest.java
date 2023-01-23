@@ -22,8 +22,7 @@ public class BaseTest extends AllureLogger {
                         .put("Browser", System.getProperty("browser", "chrome"))
                         .put("Browser.Version", System.getProperty("browserVersion", "107.0.5304.62"))
                         .put("URL", System.getProperty("base.url", "https://www.saucedemo.com/inventory.html"))
-                        .build(),
-                "target/allure-results");
+                        .build());
 
 
 //        SelenideConfig.createBrowserConfig(System.getProperty("browser", "firefox"));
