@@ -1,4 +1,4 @@
-package core.config.base;
+package core.config.pages.loginpage;
 
 import core.config.PageTools;
 import org.openqa.selenium.By;

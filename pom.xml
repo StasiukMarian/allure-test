@@ -21,6 +21,7 @@
         <allure.version>2.10.0</allure.version>
         <aspectj.version>1.9.6</aspectj.version>
         <allure.environment.writer.version>1.0.0</allure.environment.writer.version>
+        <suiteXmlFile>src\main\resources\suiteOther.xml</suiteXmlFile>
     </properties>
 
     <dependencies>
@@ -100,7 +101,12 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
-
+                    <systemProperties>
+                        <base.url>https://www.saucedemo.com/inventory.html/</base.url>
+                    </systemProperties>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
                     </configuration>
                     <dependencies>
                     <dependency>

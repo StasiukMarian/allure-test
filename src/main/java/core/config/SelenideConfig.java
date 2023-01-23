@@ -6,6 +6,7 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 
+
 public class SelenideConfig {
 
         private static DesiredCapabilities getBrowserCapabilities() {

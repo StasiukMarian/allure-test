@@ -1,9 +1,9 @@
-package core.config;
+package core.config.pages;
 
-import core.config.allure.AllureLogger;
 import core.config.pages.loginpage.LoginPage;
 
-public class Pages extends AllureLogger {
+public class Pages {
+
     private static LoginPage loginPage;
 
     public static LoginPage loginPage() {
@@ -12,4 +12,6 @@ public class Pages extends AllureLogger {
         }
         return loginPage;
     }
+
+
 }

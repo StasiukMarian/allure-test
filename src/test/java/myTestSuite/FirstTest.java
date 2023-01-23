@@ -4,6 +4,7 @@ import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
+import core.config.Pages;
 import core.config.base.BaseTest;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -27,6 +28,7 @@ public class FirstTest extends BaseTest {
         Selenide.sleep(1000);
         List<String> texts = $$(By.xpath("//div[@class='inventory_item_label']//div[@class='inventory_item_name']")).texts();
         Selenide.sleep(1000);
+        System.out.println("FIRST TEST COMPLETE");
     }
 
 

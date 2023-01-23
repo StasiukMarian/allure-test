@@ -1,2 +1,11 @@
-# Project exclude paths
-/target/
+.idea
+*.iml
+
+*.log
+
+*.html
+screenshots
+build/downloads
+target
+test-output
+.DS_Store

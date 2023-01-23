@@ -1,4 +1,4 @@
-package myTestSuite;
+package newPackage;
 
 import core.config.base.BaseTest;
 import org.testng.annotations.*;
